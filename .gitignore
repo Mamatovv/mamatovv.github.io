@@ -1,7 +1,1 @@
 .DS_Store
-
-# keep the repo light: only ship the photos actually used on the site
-assets/img/*
-!assets/img/triathlon2.JPG
-!assets/img/travel.JPG
-!assets/img/monaco3.JPG

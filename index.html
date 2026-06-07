@@ -140,25 +140,13 @@
   .hobbies{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
   @media(max-width:760px){.hobbies{grid-template-columns:1fr}}
   .hobby{
-    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card);
-    transition:transform .2s,border-color .2s;
+    border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:28px;
+    transition:transform .2s,border-color .2s,background .2s;
   }
-  .hobby:hover{transform:translateY(-4px);border-color:#2c3445}
-  .hobby .photo{
-    aspect-ratio:1/1;background:linear-gradient(160deg,var(--bg-soft),var(--card));
-    border-bottom:1px solid var(--line);position:relative;overflow:hidden;
-  }
-  .hobby .photo img{width:100%;height:100%;object-fit:cover;object-position:center 32%;display:block;transition:transform .5s ease}
-  .hobby:hover .photo img{transform:scale(1.05)}
-  .hobby .photo .ph{
-    position:absolute;inset:0;display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;
-    color:var(--faint);font-size:13px;text-align:center;padding:0 20px;line-height:1.5;
-  }
-  .hobby .photo .ph .big{font-size:42px;opacity:.85}
-  .hobby .body{padding:20px 22px}
-  .hobby .icon{font-size:22px;margin-bottom:8px}
-  .hobby h3{font-size:17px;font-weight:680;margin-bottom:6px}
-  .hobby p{font-size:14px;color:var(--muted)}
+  .hobby:hover{transform:translateY(-4px);border-color:#2c3445;background:var(--card-hover)}
+  .hobby .icon{font-size:30px;margin-bottom:14px;line-height:1}
+  .hobby h3{font-size:18px;font-weight:680;margin-bottom:8px}
+  .hobby p{font-size:14.5px;color:var(--muted)}
 
   /* ---------- CONTACT ---------- */
   .contact-card{
@@ -353,47 +341,27 @@
     <div class="hobbies">
 
       <div class="hobby">
-        <div class="photo">
-          <img src="assets/img/triathlon2.JPG" alt="Yerzhan racing a triathlon" loading="lazy">
-        </div>
-        <div class="body">
-          <div class="icon">🏊 🚴 🏃</div>
-          <h3>Triathlon</h3>
-          <p>Swim, bike and run. I track everything on Strava and train pretty much the way I work, by the numbers.</p>
-        </div>
+        <div class="icon">🏊 🚴 🏃</div>
+        <h3>Triathlon</h3>
+        <p>Swim, bike and run. I track everything on Strava and train pretty much the way I work, by the numbers.</p>
       </div>
 
       <div class="hobby">
-        <div class="photo">
-          <div class="ph"><span class="big">🪙</span>photo coming soon</div>
-        </div>
-        <div class="body">
-          <div class="icon">🪙</div>
-          <h3>Coins and old banknotes</h3>
-          <p>I collect historic coins and vintage banknotes. Probably says something that even my hobby is about money.</p>
-        </div>
+        <div class="icon">🪙</div>
+        <h3>Coins and old banknotes</h3>
+        <p>I collect historic coins and vintage banknotes. Probably says something that even my hobby is about money.</p>
       </div>
 
       <div class="hobby">
-        <div class="photo">
-          <img src="assets/img/travel.JPG" alt="Yerzhan traveling, harbor view" loading="lazy">
-        </div>
-        <div class="body">
-          <div class="icon">🌍</div>
-          <h3>Travel</h3>
-          <p>Always planning the next trip. New places are where most of my better ideas tend to come from.</p>
-        </div>
+        <div class="icon">🌍</div>
+        <h3>Travel</h3>
+        <p>Always planning the next trip. New places are where most of my better ideas tend to come from.</p>
       </div>
 
       <div class="hobby">
-        <div class="photo">
-          <img src="assets/img/monaco3.JPG" alt="Monaco Grand Prix circuit" loading="lazy">
-        </div>
-        <div class="body">
-          <div class="icon">🏁</div>
-          <h3>Formula 1</h3>
-          <p>Hooked on the strategy side of it. Got to watch the Monaco Grand Prix from trackside, which was worth the hype.</p>
-        </div>
+        <div class="icon">🏁</div>
+        <h3>Formula 1</h3>
+        <p>Hooked on the strategy side of it. Got to watch the Monaco Grand Prix from trackside, which was worth the hype.</p>
       </div>
 
     </div>
