@@ -145,11 +145,16 @@
   }
   .hobby:hover{transform:translateY(-4px);border-color:#2c3445}
   .hobby .photo{
-    aspect-ratio:16/10;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;
-    color:var(--faint);font-size:13px;border-bottom:1px solid var(--line);
-    background-size:cover;background-position:center;position:relative;
+    aspect-ratio:3/4;background:linear-gradient(160deg,var(--bg-soft),var(--card));
+    border-bottom:1px solid var(--line);position:relative;overflow:hidden;
   }
-  .hobby .photo .ph{padding:0 20px;text-align:center;line-height:1.5}
+  .hobby .photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .hobby:hover .photo img{transform:scale(1.05)}
+  .hobby .photo .ph{
+    position:absolute;inset:0;display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;
+    color:var(--faint);font-size:13px;text-align:center;padding:0 20px;line-height:1.5;
+  }
+  .hobby .photo .ph .big{font-size:42px;opacity:.85}
   .hobby .body{padding:20px 22px}
   .hobby .icon{font-size:22px;margin-bottom:8px}
   .hobby h3{font-size:17px;font-weight:680;margin-bottom:6px}
@@ -348,9 +353,8 @@
     <div class="hobbies">
 
       <div class="hobby">
-        <!-- To add a photo: drop a file in assets/img/ and set background-image below -->
-        <div class="photo" style="/* background-image:url('assets/img/triathlon.jpg'); */">
-          <span class="ph">swim, bike, run<br>add assets/img/triathlon.jpg</span>
+        <div class="photo">
+          <img src="assets/img/triathlon2.JPG" alt="Yerzhan racing a triathlon" loading="lazy">
         </div>
         <div class="body">
           <div class="icon">🏊 🚴 🏃</div>
@@ -360,8 +364,8 @@
       </div>
 
       <div class="hobby">
-        <div class="photo" style="/* background-image:url('assets/img/coins.jpg'); */">
-          <span class="ph">coins &amp; banknotes<br>add assets/img/coins.jpg</span>
+        <div class="photo">
+          <div class="ph"><span class="big">🪙</span>photo coming soon</div>
         </div>
         <div class="body">
           <div class="icon">🪙</div>
@@ -371,8 +375,8 @@
       </div>
 
       <div class="hobby">
-        <div class="photo" style="/* background-image:url('assets/img/travel.jpg'); */">
-          <span class="ph">travel<br>add assets/img/travel.jpg</span>
+        <div class="photo">
+          <img src="assets/img/travel.JPG" alt="Yerzhan traveling, harbor view" loading="lazy">
         </div>
         <div class="body">
           <div class="icon">🌍</div>
@@ -382,8 +386,8 @@
       </div>
 
       <div class="hobby">
-        <div class="photo" style="/* background-image:url('assets/img/monaco.jpg'); */">
-          <span class="ph">Monaco GP<br>add assets/img/monaco.jpg</span>
+        <div class="photo">
+          <img src="assets/img/monaco3.JPG" alt="Monaco Grand Prix circuit" loading="lazy">
         </div>
         <div class="body">
           <div class="icon">🏁</div>
