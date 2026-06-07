@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yerzhan Mamatov, Senior Product Manager</title>
+<meta name="description" content="Senior Product Manager in fintech. Cross-border payments, AML, investment products and product analytics.">
+
+<!-- Open Graph (link previews on LinkedIn / Telegram) -->
+<meta property="og:title" content="Yerzhan Mamatov, Senior Product Manager">
+<meta property="og:description" content="Fintech PM. Cross-border payments, AML, investing and product analytics.">
+<meta property="og:type" content="website">
+
+<style>
+  :root{
+    --bg:#0b0d12;
+    --bg-soft:#11141b;
+    --card:#141821;
+    --card-hover:#1a1f2b;
+    --line:#232936;
+    --text:#e7eaf0;
+    --muted:#9aa3b2;
+    --faint:#5b6472;
+    --accent:#5b8cff;
+    --accent-soft:rgba(91,140,255,.14);
+    --accent-2:#43e0c8;
+    --maxw:980px;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* ambient glow */
+  body::before{
+    content:"";
+    position:fixed;
+    top:-25%;left:50%;
+    width:900px;height:900px;
+    transform:translateX(-50%);
+    background:radial-gradient(circle, rgba(91,140,255,.16), transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:saturate(160%) blur(12px);
+    background:rgba(11,13,18,.72);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+  .brand{font-weight:700;letter-spacing:.3px;font-size:15px}
+  .brand span{color:var(--accent)}
+  .nav-links{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+  .nav-links a{transition:color .2s}
+  .nav-links a:hover{color:var(--text)}
+  @media(max-width:640px){.nav-links{display:none}}
+
+  /* ---------- HERO ---------- */
+  header{padding:96px 0 72px}
+  .eyebrow{
+    display:inline-block;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--accent);background:var(--accent-soft);padding:6px 14px;border-radius:100px;margin-bottom:22px;
+  }
+  h1{font-size:clamp(34px,6vw,58px);line-height:1.08;font-weight:760;letter-spacing:-1px;margin-bottom:18px}
+  h1 .grad{
+    background:linear-gradient(120deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .tagline{font-size:clamp(16px,2.4vw,20px);color:var(--muted);max-width:660px;margin-bottom:14px}
+  .tag-chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 34px}
+  .tag-chips span{font-size:13px;color:var(--muted);border:1px solid var(--line);padding:5px 12px;border-radius:100px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;
+    padding:11px 20px;border-radius:12px;border:1px solid var(--line);
+    transition:transform .15s,border-color .2s,background .2s;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn-primary:hover{background:#6f9bff}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* ---------- SECTION ---------- */
+  section{padding:64px 0;position:relative}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:38px}
+  .sec-num{font-size:13px;color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums}
+  .sec-head h2{font-size:clamp(22px,3.4vw,30px);font-weight:720;letter-spacing:-.5px}
+  .sec-line{flex:1;height:1px;background:var(--line)}
+
+  .lead{font-size:18px;color:var(--muted);max-width:700px}
+  .lead strong{color:var(--text);font-weight:600}
+
+  /* ---------- EXPERIENCE TIMELINE ---------- */
+  .timeline{display:flex;flex-direction:column;gap:8px}
+  .job{
+    display:grid;grid-template-columns:170px 1fr;gap:26px;
+    padding:26px;border:1px solid var(--line);border-radius:var(--radius);
+    background:var(--card);transition:background .2s,border-color .2s,transform .2s;
+  }
+  .job:hover{background:var(--card-hover);border-color:#2c3445;transform:translateX(4px)}
+  .job .when{font-size:13px;color:var(--faint);font-variant-numeric:tabular-nums}
+  .job .where{font-weight:680;font-size:15px;margin-top:4px}
+  .job .role{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:8px}
+  .job ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+  .job li{font-size:14.5px;color:var(--muted);padding-left:18px;position:relative}
+  .job li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.7}
+  @media(max-width:640px){.job{grid-template-columns:1fr;gap:14px}}
+
+  /* ---------- PROJECTS ---------- */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .proj{
+    border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:var(--card);
+    transition:transform .2s,border-color .2s,background .2s;position:relative;overflow:hidden;
+  }
+  .proj::after{
+    content:"";position:absolute;inset:0;border-radius:var(--radius);
+    background:linear-gradient(135deg,var(--accent-soft),transparent 45%);opacity:0;transition:opacity .25s;pointer-events:none;
+  }
+  .proj:hover{transform:translateY(-4px);border-color:#2c3445}
+  .proj:hover::after{opacity:1}
+  .proj .ptag{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px}
+  .proj h3{font-size:18px;font-weight:680;margin-bottom:10px;letter-spacing:-.3px}
+  .proj p{font-size:14.5px;color:var(--muted)}
+  .proj .meta{margin-top:16px;display:flex;flex-wrap:wrap;gap:7px}
+  .proj .meta span{font-size:12px;color:var(--faint);border:1px solid var(--line);padding:3px 10px;border-radius:100px}
+
+  /* ---------- HOBBIES ---------- */
+  .hobbies{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:760px){.hobbies{grid-template-columns:1fr}}
+  .hobby{
+    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card);
+    transition:transform .2s,border-color .2s;
+  }
+  .hobby:hover{transform:translateY(-4px);border-color:#2c3445}
+  .hobby .photo{
+    aspect-ratio:16/10;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;
+    color:var(--faint);font-size:13px;border-bottom:1px solid var(--line);
+    background-size:cover;background-position:center;position:relative;
+  }
+  .hobby .photo .ph{padding:0 20px;text-align:center;line-height:1.5}
+  .hobby .body{padding:20px 22px}
+  .hobby .icon{font-size:22px;margin-bottom:8px}
+  .hobby h3{font-size:17px;font-weight:680;margin-bottom:6px}
+  .hobby p{font-size:14px;color:var(--muted)}
+
+  /* ---------- CONTACT ---------- */
+  .contact-card{
+    border:1px solid var(--line);border-radius:24px;padding:48px;text-align:center;
+    background:linear-gradient(160deg,var(--card),var(--bg-soft));
+  }
+  .contact-card h2{font-size:clamp(24px,4vw,34px);font-weight:740;letter-spacing:-.6px;margin-bottom:12px}
+  .contact-card p{color:var(--muted);max-width:500px;margin:0 auto 28px}
+  .socials{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+
+  footer{padding:40px 0 60px;text-align:center;color:var(--faint);font-size:13px}
+  footer a{color:var(--muted)}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand">ymamatov<span>.</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#life">Life</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header>
+  <div class="wrap">
+    <span class="eyebrow">Senior Product Manager · Growth &amp; Data</span>
+    <h1>Yerzhan Mamatov.<br><span class="grad">Fintech, payments, data.</span></h1>
+    <p class="tagline">Senior product manager with 5+ years in fintech, banking and e-commerce. I work on cross-border payments, AML and the analytics that tell you whether a product is actually working.</p>
+    <div class="tag-chips">
+      <span>Fintech</span><span>Digital Banking</span><span>Payments</span><span>AI</span><span>Foodtech</span>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="assets/Yerzhan-Mamatov-CV.pdf" target="_blank">Download CV</a>
+      <a class="btn btn-ghost" href="#work">See my work</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">01</span><h2>About</h2><div class="sec-line"></div></div>
+    <p class="lead">
+      I started in business analysis and moved into product. Most of my work sits in fintech: cross-border P2P
+      transfers at <strong>Octobank</strong>, an investment product for trading global stocks, and the AML systems
+      that keep all of it compliant. Before that I built <strong>Choco's</strong> product analytics from scratch and
+      ran delivery on food and e-commerce products. I'm comfortable in the data myself. I write SQL, set up event
+      tracking in Amplitude and dig into the funnels instead of waiting for someone to send me a report.
+    </p>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Experience</h2><div class="sec-line"></div></div>
+    <div class="timeline">
+
+      <div class="job">
+        <div>
+          <div class="when">Dec 2024 - Jan 2026</div>
+          <div class="where">Octobank</div>
+        </div>
+        <div>
+          <div class="role">Senior Product Manager</div>
+          <ul>
+            <li>Launched P2P cross-border transfers with partner banks across Central Asia, both inbound and outbound.</li>
+            <li>Shipped an investment product for trading global stocks from a single multi-currency account.</li>
+            <li>Reworked the money movement and netting scheme, which brought transaction costs down.</li>
+            <li>Upgraded the internal AML system with current sanctions data and better detection logic.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div>
+          <div class="when">Nov 2022 - Dec 2024</div>
+          <div class="where">EPAM Systems</div>
+        </div>
+        <div>
+          <div class="role">Product Manager / Senior Business Analyst</div>
+          <ul>
+            <li>Worked across MedTech, FMCG and e-commerce for clients like Bacardi, Reckitt and Alexion.</li>
+            <li>Ran an NLP proof of concept that found rare-disease patients in unstructured medical data.</li>
+            <li>Owned requirements, backlog and Scrum ceremonies across PIM, DAM and data platform projects.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div>
+          <div class="when">Mar 2022 - Nov 2022</div>
+          <div class="where">Kwaaka</div>
+        </div>
+        <div>
+          <div class="role">Product Manager</div>
+          <ul>
+            <li>Owned a service that plugs food delivery apps (Glovo, Wolt, Bolt) straight into restaurant POS systems.</li>
+            <li>Set up Scrum from scratch and tracked delivery with burndown charts.</li>
+            <li>Built conversion funnels in Amplitude, wrote SQL and ran A/B tests.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div>
+          <div class="when">Oct 2020 - Jun 2022</div>
+          <div class="where">Choco Holding</div>
+        </div>
+        <div>
+          <div class="role">Product Manager / Business Analyst</div>
+          <ul>
+            <li>Built the Takeaway pickup service and the product analytics sitting behind it.</li>
+            <li>Set up event tracking and funnels in Amplitude from zero, prioritized with RICE.</li>
+            <li>Turned business needs into specs and kept stakeholders aligned through delivery.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORK / PROJECTS ================= -->
+<section id="work">
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Selected work</h2><div class="sec-line"></div></div>
+    <div class="grid">
+
+      <div class="proj">
+        <div class="ptag">Octobank · Payments</div>
+        <h3>Cross-border P2P transfers</h3>
+        <p>A remittance platform built to make sending money abroad feel like a local transfer. I signed partner banks across Central Asia, set up the inbound and outbound flows and reworked the netting scheme to bring cost per transaction down.</p>
+        <div class="meta"><span>Payments</span><span>Partnerships</span><span>Netting</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="ptag">Octobank · Investing</div>
+        <h3>Global stock trading</h3>
+        <p>A multi-currency account for trading stocks on global markets. I benchmarked Revolut and Robinhood to find where we could stand out, designed the onboarding and identity check with AML screening built in, and worked the funnel from sign-up to first trade.</p>
+        <div class="meta"><span>Investing</span><span>Onboarding</span><span>Funnels</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="ptag">Octobank · Compliance</div>
+        <h3>AML system upgrade</h3>
+        <p>Reworked the internal AML setup. Plugged in current sanctions databases, tightened the detection logic and sat with the compliance team to review transaction flows for red flags.</p>
+        <div class="meta"><span>AML</span><span>Sanctions</span><span>Risk</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="ptag">EPAM · Life Sciences</div>
+        <h3>NLP on unstructured data</h3>
+        <p>A proof of concept that pulled insights out of messy medical data to help spot rare-disease patients. I set the roadmap for which sources to ingest and worked with data scientists on entity extraction and sentiment models.</p>
+        <div class="meta"><span>AI / NLP</span><span>Healthcare</span><span>Discovery</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="ptag">Choco · Data</div>
+        <h3>Super-app analytics from scratch</h3>
+        <p>Stood up Choco's product analytics in Amplitude from zero. I defined the events, built the conversion funnels and shipped dashboards the team actually used to make calls instead of guessing.</p>
+        <div class="meta"><span>Amplitude</span><span>Analytics</span><span>SQL</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="ptag">Choco · Product</div>
+        <h3>Takeaway pickup service</h3>
+        <p>A B2C service for ordering food from restaurants and picking it up yourself. I owned requirements end to end, prioritized the backlog with RICE and set up the tracking to watch conversion.</p>
+        <div class="meta"><span>0 to 1</span><span>Foodtech</span><span>Delivery</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIFE / HOBBIES ================= -->
+<section id="life">
+  <div class="wrap reveal">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Off the clock</h2><div class="sec-line"></div></div>
+    <div class="hobbies">
+
+      <div class="hobby">
+        <!-- To add a photo: drop a file in assets/img/ and set background-image below -->
+        <div class="photo" style="/* background-image:url('assets/img/triathlon.jpg'); */">
+          <span class="ph">swim, bike, run<br>add assets/img/triathlon.jpg</span>
+        </div>
+        <div class="body">
+          <div class="icon">🏊 🚴 🏃</div>
+          <h3>Triathlon</h3>
+          <p>Swim, bike and run. I track everything on Strava and train pretty much the way I work, by the numbers.</p>
+        </div>
+      </div>
+
+      <div class="hobby">
+        <div class="photo" style="/* background-image:url('assets/img/coins.jpg'); */">
+          <span class="ph">coins &amp; banknotes<br>add assets/img/coins.jpg</span>
+        </div>
+        <div class="body">
+          <div class="icon">🪙</div>
+          <h3>Coins and old banknotes</h3>
+          <p>I collect historic coins and vintage banknotes. Probably says something that even my hobby is about money.</p>
+        </div>
+      </div>
+
+      <div class="hobby">
+        <div class="photo" style="/* background-image:url('assets/img/travel.jpg'); */">
+          <span class="ph">travel<br>add assets/img/travel.jpg</span>
+        </div>
+        <div class="body">
+          <div class="icon">🌍</div>
+          <h3>Travel</h3>
+          <p>Always planning the next trip. New places are where most of my better ideas tend to come from.</p>
+        </div>
+      </div>
+
+      <div class="hobby">
+        <div class="photo" style="/* background-image:url('assets/img/monaco.jpg'); */">
+          <span class="ph">Monaco GP<br>add assets/img/monaco.jpg</span>
+        </div>
+        <div class="body">
+          <div class="icon">🏁</div>
+          <h3>Formula 1</h3>
+          <p>Hooked on the strategy side of it. Got to watch the Monaco Grand Prix from trackside, which was worth the hype.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap reveal">
+    <div class="contact-card">
+      <h2>Let's talk product.</h2>
+      <p>Open to senior product roles in fintech, banking and data-heavy products. Email is the fastest way to reach me.</p>
+      <div class="socials">
+        <a class="btn btn-primary" href="mailto:yerzhan.mamatov@gmail.com">Email</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/emamatov/" target="_blank">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://t.me/yerzh_an" target="_blank">Telegram</a>
+        <a class="btn btn-ghost" href="https://strava.app.link/CddGRoRbM3b" target="_blank">Strava</a>
+        <a class="btn btn-ghost" href="assets/Yerzhan-Mamatov-CV.pdf" target="_blank">CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © <span id="year"></span> Yerzhan Mamatov. Built with plain HTML, hosted on GitHub Pages.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // reveal-on-scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
